@@ -1,0 +1,351 @@
+{
+  "slug": "kerala",
+  "name": "Kerala",
+  "court": "High Court of Kerala",
+  "updated": "2026-09-22",
+  "rollout": {
+    "courtsLive": 11,
+    "courtsPlanned": 14,
+    "note": "Most advanced state in the programme. Ernakulam, Thrissur and Kozhikode district courts fully paperless for new filings."
+  },
+  "leads": [
+    {
+      "name": "Lakshmi Pillai",
+      "role": "Programme lead",
+      "org": "Agami"
+    },
+    {
+      "name": "Justice R. Vasudevan",
+      "role": "Computerisation committee",
+      "org": "High Court of Kerala"
+    }
+  ],
+  "workstreams": [
+    {
+      "id": "kl-efiling",
+      "name": "e-Filing and scrutiny",
+      "summary": "Advocates file fresh cases and applications online. Filing clerks scrutinise and raise objections in the same queue.",
+      "stage": "deployment",
+      "stageProgress": 100,
+      "risk": "on-track",
+      "owner": {
+        "name": "Lakshmi Pillai",
+        "role": "Product lead",
+        "org": "Agami"
+      },
+      "team": [
+        {
+          "name": "Arun Kumar",
+          "role": "Full stack"
+        },
+        {
+          "name": "Meera Joshi",
+          "role": "Backend"
+        }
+      ],
+      "target": "2026-03-16",
+      "baseline": "2026-03-16",
+      "liveSince": "2026-03-16",
+      "history": [
+        {
+          "stage": "scoping",
+          "from": "2025-05-05",
+          "to": "2025-06-20"
+        },
+        {
+          "stage": "design-dev",
+          "from": "2025-06-23",
+          "to": "2025-10-31"
+        },
+        {
+          "stage": "internal-testing",
+          "from": "2025-11-03",
+          "to": "2025-12-19"
+        },
+        {
+          "stage": "user-testing",
+          "from": "2026-01-05",
+          "to": "2026-02-27"
+        },
+        {
+          "stage": "deployment",
+          "from": "2026-03-02",
+          "to": "2026-03-16"
+        }
+      ],
+      "note": "Around 78% of fresh filings in live courts now arrive through the portal."
+    },
+    {
+      "id": "kl-payments",
+      "name": "Court fee payment",
+      "summary": "Advocates and litigants pay court fees online, with automatic receipting into the case record.",
+      "stage": "deployment",
+      "stageProgress": 100,
+      "risk": "on-track",
+      "owner": {
+        "name": "Devinder Sandhu",
+        "role": "Engineering lead",
+        "org": "Agami"
+      },
+      "team": [
+        {
+          "name": "Nikhil Rao",
+          "role": "Backend"
+        }
+      ],
+      "target": "2026-02-13",
+      "baseline": "2026-02-13",
+      "liveSince": "2026-02-13",
+      "history": [
+        {
+          "stage": "scoping",
+          "from": "2025-04-07",
+          "to": "2025-05-16"
+        },
+        {
+          "stage": "design-dev",
+          "from": "2025-05-19",
+          "to": "2025-09-12"
+        },
+        {
+          "stage": "internal-testing",
+          "from": "2025-09-15",
+          "to": "2025-10-24"
+        },
+        {
+          "stage": "user-testing",
+          "from": "2025-10-27",
+          "to": "2026-01-23"
+        },
+        {
+          "stage": "deployment",
+          "from": "2026-01-27",
+          "to": "2026-02-13"
+        }
+      ],
+      "note": "Integrated with the state treasury portal. Daily auto reconciliation since March."
+    },
+    {
+      "id": "kl-causelist",
+      "name": "Cause list and hearing scheduling",
+      "summary": "Daily cause lists generated from the case register, with judge availability and courtroom allocation.",
+      "stage": "deployment",
+      "stageProgress": 100,
+      "risk": "on-track",
+      "owner": {
+        "name": "Anjali Menon",
+        "role": "Product lead",
+        "org": "Agami"
+      },
+      "team": [
+        {
+          "name": "Sahil Khurana",
+          "role": "Full stack"
+        }
+      ],
+      "target": "2026-05-29",
+      "baseline": "2026-05-29",
+      "liveSince": "2026-05-29",
+      "history": [
+        {
+          "stage": "scoping",
+          "from": "2025-08-04",
+          "to": "2025-09-05"
+        },
+        {
+          "stage": "design-dev",
+          "from": "2025-09-08",
+          "to": "2026-01-16"
+        },
+        {
+          "stage": "internal-testing",
+          "from": "2026-01-19",
+          "to": "2026-03-06"
+        },
+        {
+          "stage": "user-testing",
+          "from": "2026-03-09",
+          "to": "2026-05-08"
+        },
+        {
+          "stage": "deployment",
+          "from": "2026-05-11",
+          "to": "2026-05-29"
+        }
+      ],
+      "note": "Cause lists publish at 18:00 the previous day without manual intervention."
+    },
+    {
+      "id": "kl-orders",
+      "name": "Order and judgment drafting",
+      "summary": "Judges draft, dictate and sign orders inside the case record, with templates for routine orders.",
+      "stage": "user-testing",
+      "stageProgress": 70,
+      "risk": "on-track",
+      "owner": {
+        "name": "Vikram Seth",
+        "role": "Engineering lead",
+        "org": "Agami"
+      },
+      "team": [
+        {
+          "name": "Aditi Verma",
+          "role": "Design"
+        },
+        {
+          "name": "Ronak Shah",
+          "role": "Frontend"
+        },
+        {
+          "name": "Sreeja Menon",
+          "role": "Court liaison, Ernakulam"
+        }
+      ],
+      "target": "2026-10-30",
+      "baseline": "2026-10-30",
+      "history": [
+        {
+          "stage": "scoping",
+          "from": "2025-10-06",
+          "to": "2025-11-21"
+        },
+        {
+          "stage": "design-dev",
+          "from": "2025-11-24",
+          "to": "2026-05-22"
+        },
+        {
+          "stage": "internal-testing",
+          "from": "2026-05-25",
+          "to": "2026-07-17"
+        },
+        {
+          "stage": "user-testing",
+          "from": "2026-07-20",
+          "to": null
+        }
+      ],
+      "note": "Nine judges in the test group. Malayalam dictation accuracy is the last open item."
+    },
+    {
+      "id": "kl-adr",
+      "name": "Mediation and Lok Adalat referral",
+      "summary": "Referral to mediation from the case record, mediator allocation and settlement recording.",
+      "stage": "internal-testing",
+      "stageProgress": 55,
+      "risk": "on-track",
+      "owner": {
+        "name": "Priya Varma",
+        "role": "Product lead",
+        "org": "Agami"
+      },
+      "team": [
+        {
+          "name": "Imran Qureshi",
+          "role": "Backend"
+        },
+        {
+          "name": "Preeti Bansal",
+          "role": "QA"
+        }
+      ],
+      "target": "2026-12-04",
+      "baseline": "2026-12-04",
+      "history": [
+        {
+          "stage": "scoping",
+          "from": "2026-01-19",
+          "to": "2026-03-13"
+        },
+        {
+          "stage": "design-dev",
+          "from": "2026-03-16",
+          "to": "2026-08-07"
+        },
+        {
+          "stage": "internal-testing",
+          "from": "2026-08-10",
+          "to": null
+        }
+      ],
+      "note": "Built with the Kerala State Legal Services Authority. Their panel data is already loaded."
+    },
+    {
+      "id": "kl-records",
+      "name": "Digital case bundle",
+      "summary": "Every filing, order and exhibit in one paginated, searchable bundle that a judge can read on the bench.",
+      "stage": "design-dev",
+      "stageProgress": 85,
+      "risk": "watch",
+      "owner": {
+        "name": "Anjali Menon",
+        "role": "Product lead",
+        "org": "Agami"
+      },
+      "team": [
+        {
+          "name": "Deepa Nair",
+          "role": "Design"
+        },
+        {
+          "name": "Arun Kumar",
+          "role": "Full stack"
+        }
+      ],
+      "target": "2027-01-15",
+      "baseline": "2027-01-15",
+      "history": [
+        {
+          "stage": "scoping",
+          "from": "2026-02-02",
+          "to": "2026-03-27"
+        },
+        {
+          "stage": "design-dev",
+          "from": "2026-03-30",
+          "to": null
+        }
+      ],
+      "note": "Bundle generation is slow for cases above 2,000 pages. Performance work in progress."
+    },
+    {
+      "id": "kl-insight",
+      "name": "Court performance view",
+      "summary": "Pendency, disposal rate and ageing of cases for the district judge, refreshed nightly.",
+      "stage": "internal-testing",
+      "stageProgress": 20,
+      "risk": "blocked",
+      "owner": {
+        "name": "Nandita Rao",
+        "role": "Data lead",
+        "org": "Agami"
+      },
+      "team": [
+        {
+          "name": "Faizal Ahmed",
+          "role": "Data engineering"
+        }
+      ],
+      "target": "2026-11-20",
+      "baseline": "2026-10-23",
+      "history": [
+        {
+          "stage": "scoping",
+          "from": "2026-03-02",
+          "to": "2026-04-10"
+        },
+        {
+          "stage": "design-dev",
+          "from": "2026-04-13",
+          "to": "2026-08-28"
+        },
+        {
+          "stage": "internal-testing",
+          "from": "2026-08-31",
+          "to": null
+        }
+      ],
+      "note": "Publication rules for judge level data are pending a High Court decision. Testing continues on anonymised data."
+    }
+  ]
+}

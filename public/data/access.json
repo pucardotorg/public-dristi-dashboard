@@ -1,0 +1,51 @@
+{
+  "kdf": {
+    "salt": "a72f8fc205940d19ed8bfb259dc6874f",
+    "iterations": 150000
+  },
+  "grants": [
+    {
+      "id": "pb-court-2026",
+      "label": "Punjab judiciary",
+      "states": [
+        "punjab"
+      ],
+      "verifier": "e8d1d1a56f4adbd5ea704e395e12048a258f983247e573b114830001b48ad068"
+    },
+    {
+      "id": "hr-court-2026",
+      "label": "Haryana judiciary",
+      "states": [
+        "haryana"
+      ],
+      "verifier": "2aeabf12ac755994f3410e7938eb72dea8db7316783feec5ac56ba030a918c1d"
+    },
+    {
+      "id": "kl-court-2026",
+      "label": "Kerala judiciary",
+      "states": [
+        "kerala"
+      ],
+      "verifier": "7d527ba961033fc5db8f6776923eac5656d92f2ab8b346e9c6c751046df1ead4"
+    },
+    {
+      "id": "gj-court-2026",
+      "label": "Gujarat judiciary",
+      "states": [
+        "gujarat"
+      ],
+      "verifier": "1ac4da48c31722d5b4463571523cd1d466200fd27210cf110bcd4b3adbada40c"
+    },
+    {
+      "id": "pucar-pmo-2026",
+      "label": "Programme office",
+      "states": [
+        "punjab",
+        "haryana",
+        "kerala",
+        "gujarat"
+      ],
+      "verifier": "a1826125f92260745f5f939db33da52b14df1d34a8ff8bf51dadecab09e1773b"
+    }
+  ]
+}

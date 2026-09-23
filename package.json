@@ -1,0 +1,14 @@
+{
+  "name": "court-deployment-dashboard",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Static, access gated deployment tracker for PUCAR court rollouts",
+  "scripts": {
+    "validate": "node scripts/validate.mjs",
+    "check": "node --check public/app/main.js && npm run validate",
+    "serve": "node scripts/serve.mjs",
+    "access-code": "node scripts/access-code.mjs",
+    "stamp": "node scripts/stamp.mjs"
+  }
+}

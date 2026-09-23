@@ -1,0 +1,367 @@
+{
+  "slug": "punjab",
+  "name": "Punjab",
+  "court": "Punjab & Haryana High Court",
+  "updated": "2026-09-22",
+  "rollout": {
+    "courtsLive": 6,
+    "courtsPlanned": 24,
+    "note": "Live in Ludhiana and SAS Nagar district courts. Patiala and Jalandhar follow in the next window."
+  },
+  "leads": [
+    {
+      "name": "Ritu Malhotra",
+      "role": "Programme lead",
+      "org": "Agami"
+    },
+    {
+      "name": "Justice A. S. Grewal",
+      "role": "Computer committee chair",
+      "org": "Punjab & Haryana High Court"
+    }
+  ],
+  "workstreams": [
+    {
+      "id": "pb-payments",
+      "name": "Court fee payment",
+      "summary": "Advocates and litigants pay court fees online, with automatic receipting into the case record.",
+      "stage": "deployment",
+      "stageProgress": 100,
+      "risk": "on-track",
+      "owner": {
+        "name": "Devinder Sandhu",
+        "role": "Engineering lead",
+        "org": "Agami"
+      },
+      "team": [
+        {
+          "name": "Nikhil Rao",
+          "role": "Backend"
+        },
+        {
+          "name": "Preeti Bansal",
+          "role": "QA"
+        }
+      ],
+      "target": "2026-06-30",
+      "baseline": "2026-06-30",
+      "liveSince": "2026-06-30",
+      "history": [
+        {
+          "stage": "scoping",
+          "from": "2025-11-04",
+          "to": "2025-12-12"
+        },
+        {
+          "stage": "design-dev",
+          "from": "2025-12-15",
+          "to": "2026-03-20"
+        },
+        {
+          "stage": "internal-testing",
+          "from": "2026-03-23",
+          "to": "2026-05-08"
+        },
+        {
+          "stage": "user-testing",
+          "from": "2026-05-11",
+          "to": "2026-06-19"
+        },
+        {
+          "stage": "deployment",
+          "from": "2026-06-22",
+          "to": "2026-06-30"
+        }
+      ],
+      "note": "Running in all six live courts. Reconciliation with the treasury is now a daily automated job."
+    },
+    {
+      "id": "pb-causelist",
+      "name": "Cause list and hearing scheduling",
+      "summary": "Daily cause lists generated from the case register, with judge availability and courtroom allocation.",
+      "stage": "deployment",
+      "stageProgress": 100,
+      "risk": "on-track",
+      "owner": {
+        "name": "Anjali Menon",
+        "role": "Product lead",
+        "org": "Agami"
+      },
+      "team": [
+        {
+          "name": "Sahil Khurana",
+          "role": "Full stack"
+        },
+        {
+          "name": "Rekha Iyer",
+          "role": "Design"
+        }
+      ],
+      "target": "2026-08-12",
+      "baseline": "2026-07-31",
+      "liveSince": "2026-08-12",
+      "history": [
+        {
+          "stage": "scoping",
+          "from": "2025-12-01",
+          "to": "2026-01-16"
+        },
+        {
+          "stage": "design-dev",
+          "from": "2026-01-19",
+          "to": "2026-04-24"
+        },
+        {
+          "stage": "internal-testing",
+          "from": "2026-04-27",
+          "to": "2026-06-05"
+        },
+        {
+          "stage": "user-testing",
+          "from": "2026-06-08",
+          "to": "2026-07-24"
+        },
+        {
+          "stage": "deployment",
+          "from": "2026-07-27",
+          "to": "2026-08-12"
+        }
+      ],
+      "note": "Went live 12 days after the original date because the courtroom master data needed cleaning up first."
+    },
+    {
+      "id": "pb-efiling",
+      "name": "e-Filing and scrutiny",
+      "summary": "Advocates file fresh cases and applications online. Filing clerks scrutinise and raise objections in the same queue.",
+      "stage": "user-testing",
+      "stageProgress": 45,
+      "risk": "on-track",
+      "owner": {
+        "name": "Ritu Malhotra",
+        "role": "Product lead",
+        "org": "Agami"
+      },
+      "team": [
+        {
+          "name": "Karan Ahluwalia",
+          "role": "Frontend"
+        },
+        {
+          "name": "Meera Joshi",
+          "role": "Backend"
+        },
+        {
+          "name": "Gurpreet Kaur",
+          "role": "Court liaison, Ludhiana"
+        }
+      ],
+      "target": "2026-11-14",
+      "baseline": "2026-11-14",
+      "history": [
+        {
+          "stage": "scoping",
+          "from": "2026-01-06",
+          "to": "2026-02-20"
+        },
+        {
+          "stage": "design-dev",
+          "from": "2026-02-23",
+          "to": "2026-07-10"
+        },
+        {
+          "stage": "internal-testing",
+          "from": "2026-07-13",
+          "to": "2026-08-28"
+        },
+        {
+          "stage": "user-testing",
+          "from": "2026-09-01",
+          "to": null
+        }
+      ],
+      "note": "14 advocates and 4 filing clerks in the test group. 23 of 31 test scripts signed off."
+    },
+    {
+      "id": "pb-orders",
+      "name": "Order and judgment drafting",
+      "summary": "Judges draft, dictate and sign orders inside the case record, with templates for routine orders.",
+      "stage": "design-dev",
+      "stageProgress": 70,
+      "risk": "watch",
+      "owner": {
+        "name": "Vikram Seth",
+        "role": "Engineering lead",
+        "org": "Agami"
+      },
+      "team": [
+        {
+          "name": "Aditi Verma",
+          "role": "Design"
+        },
+        {
+          "name": "Ronak Shah",
+          "role": "Frontend"
+        },
+        {
+          "name": "Imran Qureshi",
+          "role": "Backend"
+        }
+      ],
+      "target": "2027-01-30",
+      "baseline": "2027-01-30",
+      "history": [
+        {
+          "stage": "scoping",
+          "from": "2026-03-02",
+          "to": "2026-04-17"
+        },
+        {
+          "stage": "design-dev",
+          "from": "2026-04-20",
+          "to": null
+        }
+      ],
+      "note": "Digital signing depends on the eSign vendor renewal. Two weeks of slack left before the date is at risk."
+    },
+    {
+      "id": "pb-summons",
+      "name": "Summons and notice tracking",
+      "summary": "Electronic service of summons with delivery status from the process server app and the postal API.",
+      "stage": "internal-testing",
+      "stageProgress": 30,
+      "risk": "delayed",
+      "owner": {
+        "name": "Shalini Bhatt",
+        "role": "Product lead",
+        "org": "Agami"
+      },
+      "team": [
+        {
+          "name": "Tarun Gill",
+          "role": "Backend"
+        },
+        {
+          "name": "Preeti Bansal",
+          "role": "QA"
+        }
+      ],
+      "target": "2026-12-19",
+      "baseline": "2026-10-31",
+      "history": [
+        {
+          "stage": "scoping",
+          "from": "2026-02-02",
+          "to": "2026-03-13"
+        },
+        {
+          "stage": "design-dev",
+          "from": "2026-03-16",
+          "to": "2026-08-21"
+        },
+        {
+          "stage": "internal-testing",
+          "from": "2026-08-24",
+          "to": null
+        }
+      ],
+      "note": "Postal department sandbox was unavailable for six weeks. Date moved out by seven weeks as a result."
+    },
+    {
+      "id": "pb-records",
+      "name": "Digital case bundle",
+      "summary": "Every filing, order and exhibit in one paginated, searchable bundle that a judge can read on the bench.",
+      "stage": "design-dev",
+      "stageProgress": 25,
+      "risk": "on-track",
+      "owner": {
+        "name": "Anjali Menon",
+        "role": "Product lead",
+        "org": "Agami"
+      },
+      "team": [
+        {
+          "name": "Sahil Khurana",
+          "role": "Full stack"
+        },
+        {
+          "name": "Deepa Nair",
+          "role": "Design"
+        }
+      ],
+      "target": "2027-03-16",
+      "baseline": "2027-03-16",
+      "history": [
+        {
+          "stage": "scoping",
+          "from": "2026-05-04",
+          "to": "2026-07-03"
+        },
+        {
+          "stage": "design-dev",
+          "from": "2026-07-06",
+          "to": null
+        }
+      ],
+      "note": "Scanning backlog for old records is being handled separately by the High Court."
+    },
+    {
+      "id": "pb-bail",
+      "name": "Bail application workflow",
+      "summary": "End to end bail applications, including surety verification and automatic release order generation.",
+      "stage": "scoping",
+      "stageProgress": 60,
+      "risk": "blocked",
+      "owner": {
+        "name": "Shalini Bhatt",
+        "role": "Product lead",
+        "org": "Agami"
+      },
+      "team": [
+        {
+          "name": "Justice A. S. Grewal",
+          "role": "Sponsor",
+          "org": "Punjab & Haryana High Court"
+        }
+      ],
+      "target": "2027-02-27",
+      "baseline": "2027-01-16",
+      "history": [
+        {
+          "stage": "scoping",
+          "from": "2026-07-13",
+          "to": null
+        }
+      ],
+      "note": "Waiting on the computer committee to approve the surety verification process. Next sitting is 2026-10-09."
+    },
+    {
+      "id": "pb-insight",
+      "name": "Court performance view",
+      "summary": "Pendency, disposal rate and ageing of cases for the district judge, refreshed nightly.",
+      "stage": "scoping",
+      "stageProgress": 20,
+      "risk": "on-track",
+      "owner": {
+        "name": "Nandita Rao",
+        "role": "Data lead",
+        "org": "Agami"
+      },
+      "team": [
+        {
+          "name": "Faizal Ahmed",
+          "role": "Data engineering"
+        }
+      ],
+      "target": "2027-04-30",
+      "baseline": "2027-04-30",
+      "history": [
+        {
+          "stage": "scoping",
+          "from": "2026-09-01",
+          "to": null
+        }
+      ],
+      "note": "Indicator set being agreed with the High Court statistics section."
+    }
+  ]
+}

@@ -1,0 +1,314 @@
+{
+  "slug": "haryana",
+  "name": "Haryana",
+  "court": "Punjab & Haryana High Court",
+  "updated": "2026-09-22",
+  "rollout": {
+    "courtsLive": 3,
+    "courtsPlanned": 22,
+    "note": "Live in Gurugram and Panchkula. Faridabad is in training, expected to switch over in October."
+  },
+  "leads": [
+    {
+      "name": "Mohit Chawla",
+      "role": "Programme lead",
+      "org": "Agami"
+    },
+    {
+      "name": "Justice A. S. Grewal",
+      "role": "Computer committee chair",
+      "org": "Punjab & Haryana High Court"
+    }
+  ],
+  "workstreams": [
+    {
+      "id": "hr-causelist",
+      "name": "Cause list and hearing scheduling",
+      "summary": "Daily cause lists generated from the case register, with judge availability and courtroom allocation.",
+      "stage": "deployment",
+      "stageProgress": 100,
+      "risk": "on-track",
+      "owner": {
+        "name": "Anjali Menon",
+        "role": "Product lead",
+        "org": "Agami"
+      },
+      "team": [
+        {
+          "name": "Sahil Khurana",
+          "role": "Full stack"
+        },
+        {
+          "name": "Bhavna Sethi",
+          "role": "Court liaison, Gurugram"
+        }
+      ],
+      "target": "2026-09-04",
+      "baseline": "2026-09-04",
+      "liveSince": "2026-09-04",
+      "history": [
+        {
+          "stage": "scoping",
+          "from": "2026-01-12",
+          "to": "2026-02-13"
+        },
+        {
+          "stage": "design-dev",
+          "from": "2026-02-16",
+          "to": "2026-05-15"
+        },
+        {
+          "stage": "internal-testing",
+          "from": "2026-05-18",
+          "to": "2026-06-26"
+        },
+        {
+          "stage": "user-testing",
+          "from": "2026-06-29",
+          "to": "2026-08-21"
+        },
+        {
+          "stage": "deployment",
+          "from": "2026-08-24",
+          "to": "2026-09-04"
+        }
+      ],
+      "note": "Reused the Punjab build with changes to the courtroom naming convention."
+    },
+    {
+      "id": "hr-payments",
+      "name": "Court fee payment",
+      "summary": "Advocates and litigants pay court fees online, with automatic receipting into the case record.",
+      "stage": "user-testing",
+      "stageProgress": 80,
+      "risk": "on-track",
+      "owner": {
+        "name": "Devinder Sandhu",
+        "role": "Engineering lead",
+        "org": "Agami"
+      },
+      "team": [
+        {
+          "name": "Nikhil Rao",
+          "role": "Backend"
+        },
+        {
+          "name": "Preeti Bansal",
+          "role": "QA"
+        }
+      ],
+      "target": "2026-10-16",
+      "baseline": "2026-10-16",
+      "history": [
+        {
+          "stage": "scoping",
+          "from": "2026-02-09",
+          "to": "2026-03-06"
+        },
+        {
+          "stage": "design-dev",
+          "from": "2026-03-09",
+          "to": "2026-06-12"
+        },
+        {
+          "stage": "internal-testing",
+          "from": "2026-06-15",
+          "to": "2026-07-31"
+        },
+        {
+          "stage": "user-testing",
+          "from": "2026-08-03",
+          "to": null
+        }
+      ],
+      "note": "Treasury head codes differ from Punjab. Mapping confirmed by the Haryana finance department on 2026-09-11."
+    },
+    {
+      "id": "hr-efiling",
+      "name": "e-Filing and scrutiny",
+      "summary": "Advocates file fresh cases and applications online. Filing clerks scrutinise and raise objections in the same queue.",
+      "stage": "internal-testing",
+      "stageProgress": 65,
+      "risk": "watch",
+      "owner": {
+        "name": "Mohit Chawla",
+        "role": "Product lead",
+        "org": "Agami"
+      },
+      "team": [
+        {
+          "name": "Karan Ahluwalia",
+          "role": "Frontend"
+        },
+        {
+          "name": "Meera Joshi",
+          "role": "Backend"
+        },
+        {
+          "name": "Preeti Bansal",
+          "role": "QA"
+        }
+      ],
+      "target": "2026-12-11",
+      "baseline": "2026-12-11",
+      "history": [
+        {
+          "stage": "scoping",
+          "from": "2026-02-23",
+          "to": "2026-04-03"
+        },
+        {
+          "stage": "design-dev",
+          "from": "2026-04-06",
+          "to": "2026-08-14"
+        },
+        {
+          "stage": "internal-testing",
+          "from": "2026-08-17",
+          "to": null
+        }
+      ],
+      "note": "Bar association wants a bulk upload option. Being assessed, may add two weeks if accepted."
+    },
+    {
+      "id": "hr-summons",
+      "name": "Summons and notice tracking",
+      "summary": "Electronic service of summons with delivery status from the process server app and the postal API.",
+      "stage": "design-dev",
+      "stageProgress": 40,
+      "risk": "delayed",
+      "owner": {
+        "name": "Shalini Bhatt",
+        "role": "Product lead",
+        "org": "Agami"
+      },
+      "team": [
+        {
+          "name": "Tarun Gill",
+          "role": "Backend"
+        }
+      ],
+      "target": "2027-02-12",
+      "baseline": "2026-12-31",
+      "history": [
+        {
+          "stage": "scoping",
+          "from": "2026-04-13",
+          "to": "2026-05-22"
+        },
+        {
+          "stage": "design-dev",
+          "from": "2026-05-25",
+          "to": null
+        }
+      ],
+      "note": "Follows Punjab, so the postal API delay carried over here too. Six weeks added."
+    },
+    {
+      "id": "hr-orders",
+      "name": "Order and judgment drafting",
+      "summary": "Judges draft, dictate and sign orders inside the case record, with templates for routine orders.",
+      "stage": "scoping",
+      "stageProgress": 75,
+      "risk": "on-track",
+      "owner": {
+        "name": "Vikram Seth",
+        "role": "Engineering lead",
+        "org": "Agami"
+      },
+      "team": [
+        {
+          "name": "Aditi Verma",
+          "role": "Design"
+        }
+      ],
+      "target": "2027-03-27",
+      "baseline": "2027-03-27",
+      "history": [
+        {
+          "stage": "scoping",
+          "from": "2026-08-03",
+          "to": null
+        }
+      ],
+      "note": "Waiting for the Punjab build to reach user testing before committing the design here."
+    },
+    {
+      "id": "hr-training",
+      "name": "Staff training and adoption",
+      "summary": "Role based training for readers, stenographers and filing clerks, plus a help desk for the first 90 days.",
+      "stage": "user-testing",
+      "stageProgress": 35,
+      "risk": "watch",
+      "owner": {
+        "name": "Bhavna Sethi",
+        "role": "Adoption lead",
+        "org": "Agami"
+      },
+      "team": [
+        {
+          "name": "Rajat Thakur",
+          "role": "Trainer"
+        },
+        {
+          "name": "Sunita Devi",
+          "role": "Trainer"
+        }
+      ],
+      "target": "2026-11-27",
+      "baseline": "2026-11-27",
+      "history": [
+        {
+          "stage": "scoping",
+          "from": "2026-03-02",
+          "to": "2026-03-27"
+        },
+        {
+          "stage": "design-dev",
+          "from": "2026-03-30",
+          "to": "2026-06-19"
+        },
+        {
+          "stage": "internal-testing",
+          "from": "2026-06-22",
+          "to": "2026-07-17"
+        },
+        {
+          "stage": "user-testing",
+          "from": "2026-07-20",
+          "to": null
+        }
+      ],
+      "note": "Faridabad batches are behind because of court vacations. Two extra batches scheduled in October."
+    },
+    {
+      "id": "hr-records",
+      "name": "Digital case bundle",
+      "summary": "Every filing, order and exhibit in one paginated, searchable bundle that a judge can read on the bench.",
+      "stage": "scoping",
+      "stageProgress": 15,
+      "risk": "on-track",
+      "owner": {
+        "name": "Anjali Menon",
+        "role": "Product lead",
+        "org": "Agami"
+      },
+      "team": [
+        {
+          "name": "Deepa Nair",
+          "role": "Design"
+        }
+      ],
+      "target": "2027-06-30",
+      "baseline": "2027-06-30",
+      "history": [
+        {
+          "stage": "scoping",
+          "from": "2026-09-07",
+          "to": null
+        }
+      ],
+      "note": "Sequenced after Punjab so the record structure is settled once, not twice."
+    }
+  ]
+}

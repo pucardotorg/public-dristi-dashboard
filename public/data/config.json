@@ -1,0 +1,55 @@
+{
+  "programme": "PUCAR",
+  "title": "Court Deployment Tracker",
+  "subtitle": "Where each piece of work stands, court by court",
+  "contact": "pucar-support@agami.in",
+  "stages": [
+    {
+      "id": "scoping",
+      "label": "Scoping",
+      "short": "Scope",
+      "weight": 10,
+      "description": "Requirements agreed with the court, process mapped, decisions recorded."
+    },
+    {
+      "id": "design-dev",
+      "label": "Design & development",
+      "short": "Build",
+      "weight": 40,
+      "description": "Screens designed, reviewed with users, then built and code reviewed."
+    },
+    {
+      "id": "internal-testing",
+      "label": "Internal testing",
+      "short": "QA",
+      "weight": 20,
+      "description": "Functional, regression and load testing by the delivery team."
+    },
+    {
+      "id": "user-testing",
+      "label": "User testing",
+      "short": "UAT",
+      "weight": 20,
+      "description": "Court staff and judges test with real case data and sign off."
+    },
+    {
+      "id": "deployment",
+      "label": "Deployment",
+      "short": "Live",
+      "weight": 10,
+      "description": "Released to production, staff trained, adoption monitored."
+    }
+  ],
+  "risks": [
+    { "id": "on-track", "label": "On track", "description": "Expected to hit the current target date." },
+    { "id": "watch", "label": "Watch", "description": "Some slack used up. No date change yet." },
+    { "id": "delayed", "label": "Delayed", "description": "Target date has moved out." },
+    { "id": "blocked", "label": "Blocked", "description": "Waiting on a decision or dependency outside the team." }
+  ],
+  "states": [
+    { "slug": "punjab", "name": "Punjab", "court": "Punjab & Haryana High Court" },
+    { "slug": "haryana", "name": "Haryana", "court": "Punjab & Haryana High Court" },
+    { "slug": "kerala", "name": "Kerala", "court": "High Court of Kerala" },
+    { "slug": "gujarat", "name": "Gujarat", "court": "High Court of Gujarat" }
+  ]
+}
