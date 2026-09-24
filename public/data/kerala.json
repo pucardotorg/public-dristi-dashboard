@@ -9,16 +9,8 @@
     "note": "Most advanced state in the programme. Ernakulam, Thrissur and Kozhikode district courts fully paperless for new filings."
   },
   "leads": [
-    {
-      "name": "Lakshmi Pillai",
-      "role": "Programme lead",
-      "org": "Agami"
-    },
-    {
-      "name": "Justice R. Vasudevan",
-      "role": "Computerisation committee",
-      "org": "High Court of Kerala"
-    }
+    "lakshmi-pillai",
+    "justice-r-vasudevan"
   ],
   "workstreams": [
     {
@@ -28,20 +20,10 @@
       "stage": "deployment",
       "stageProgress": 100,
       "risk": "on-track",
-      "owner": {
-        "name": "Lakshmi Pillai",
-        "role": "Product lead",
-        "org": "Agami"
-      },
+      "owner": "lakshmi-pillai",
       "team": [
-        {
-          "name": "Arun Kumar",
-          "role": "Full stack"
-        },
-        {
-          "name": "Meera Joshi",
-          "role": "Backend"
-        }
+        "arun-kumar",
+        "meera-joshi"
       ],
       "target": "2026-03-16",
       "baseline": "2026-03-16",
@@ -73,7 +55,27 @@
           "to": "2026-03-16"
         }
       ],
-      "note": "Around 78% of fresh filings in live courts now arrive through the portal."
+      "note": "Around 78% of fresh filings in live courts now arrive through the portal.",
+      "files": [
+        {
+          "name": "Release note",
+          "type": "doc",
+          "updated": "2026-03-16",
+          "href": null
+        },
+        {
+          "name": "User testing sign-off",
+          "type": "pdf",
+          "updated": "2026-02-27",
+          "href": null
+        },
+        {
+          "name": "Internal test report",
+          "type": "sheet",
+          "updated": "2025-12-19",
+          "href": null
+        }
+      ]
     },
     {
       "id": "kl-payments",
@@ -82,16 +84,9 @@
       "stage": "deployment",
       "stageProgress": 100,
       "risk": "on-track",
-      "owner": {
-        "name": "Devinder Sandhu",
-        "role": "Engineering lead",
-        "org": "Agami"
-      },
+      "owner": "devinder-sandhu",
       "team": [
-        {
-          "name": "Nikhil Rao",
-          "role": "Backend"
-        }
+        "nikhil-rao"
       ],
       "target": "2026-02-13",
       "baseline": "2026-02-13",
@@ -123,7 +118,27 @@
           "to": "2026-02-13"
         }
       ],
-      "note": "Integrated with the state treasury portal. Daily auto reconciliation since March."
+      "note": "Integrated with the state treasury portal. Daily auto reconciliation since March.",
+      "files": [
+        {
+          "name": "Release note",
+          "type": "doc",
+          "updated": "2026-02-13",
+          "href": null
+        },
+        {
+          "name": "User testing sign-off",
+          "type": "pdf",
+          "updated": "2026-01-23",
+          "href": null
+        },
+        {
+          "name": "Internal test report",
+          "type": "sheet",
+          "updated": "2025-10-24",
+          "href": null
+        }
+      ]
     },
     {
       "id": "kl-causelist",
@@ -132,16 +147,9 @@
       "stage": "deployment",
       "stageProgress": 100,
       "risk": "on-track",
-      "owner": {
-        "name": "Anjali Menon",
-        "role": "Product lead",
-        "org": "Agami"
-      },
+      "owner": "anjali-menon",
       "team": [
-        {
-          "name": "Sahil Khurana",
-          "role": "Full stack"
-        }
+        "sahil-khurana"
       ],
       "target": "2026-05-29",
       "baseline": "2026-05-29",
@@ -173,7 +181,27 @@
           "to": "2026-05-29"
         }
       ],
-      "note": "Cause lists publish at 18:00 the previous day without manual intervention."
+      "note": "Cause lists publish at 18:00 the previous day without manual intervention.",
+      "files": [
+        {
+          "name": "Release note",
+          "type": "doc",
+          "updated": "2026-05-29",
+          "href": null
+        },
+        {
+          "name": "User testing sign-off",
+          "type": "pdf",
+          "updated": "2026-05-08",
+          "href": null
+        },
+        {
+          "name": "Internal test report",
+          "type": "sheet",
+          "updated": "2026-03-06",
+          "href": null
+        }
+      ]
     },
     {
       "id": "kl-orders",
@@ -182,24 +210,11 @@
       "stage": "user-testing",
       "stageProgress": 70,
       "risk": "on-track",
-      "owner": {
-        "name": "Vikram Seth",
-        "role": "Engineering lead",
-        "org": "Agami"
-      },
+      "owner": "vikram-seth",
       "team": [
-        {
-          "name": "Aditi Verma",
-          "role": "Design"
-        },
-        {
-          "name": "Ronak Shah",
-          "role": "Frontend"
-        },
-        {
-          "name": "Sreeja Menon",
-          "role": "Court liaison, Ernakulam"
-        }
+        "aditi-verma",
+        "ronak-shah",
+        "sreeja-menon"
       ],
       "target": "2026-10-30",
       "baseline": "2026-10-30",
@@ -225,7 +240,27 @@
           "to": null
         }
       ],
-      "note": "Nine judges in the test group. Malayalam dictation accuracy is the last open item."
+      "note": "Nine judges in the test group. Malayalam dictation accuracy is the last open item.",
+      "files": [
+        {
+          "name": "User testing script",
+          "type": "sheet",
+          "updated": "2026-07-20",
+          "href": null
+        },
+        {
+          "name": "Internal test report",
+          "type": "sheet",
+          "updated": "2026-07-17",
+          "href": null
+        },
+        {
+          "name": "Design and build specification",
+          "type": "doc",
+          "updated": "2026-05-22",
+          "href": null
+        }
+      ]
     },
     {
       "id": "kl-adr",
@@ -234,20 +269,10 @@
       "stage": "internal-testing",
       "stageProgress": 55,
       "risk": "on-track",
-      "owner": {
-        "name": "Priya Varma",
-        "role": "Product lead",
-        "org": "Agami"
-      },
+      "owner": "priya-varma",
       "team": [
-        {
-          "name": "Imran Qureshi",
-          "role": "Backend"
-        },
-        {
-          "name": "Preeti Bansal",
-          "role": "QA"
-        }
+        "imran-qureshi",
+        "preeti-bansal"
       ],
       "target": "2026-12-04",
       "baseline": "2026-12-04",
@@ -268,7 +293,27 @@
           "to": null
         }
       ],
-      "note": "Built with the Kerala State Legal Services Authority. Their panel data is already loaded."
+      "note": "Built with the Kerala State Legal Services Authority. Their panel data is already loaded.",
+      "files": [
+        {
+          "name": "Test plan",
+          "type": "sheet",
+          "updated": "2026-08-10",
+          "href": null
+        },
+        {
+          "name": "Design and build specification",
+          "type": "doc",
+          "updated": "2026-08-07",
+          "href": null
+        },
+        {
+          "name": "Scope and process note",
+          "type": "pdf",
+          "updated": "2026-03-13",
+          "href": null
+        }
+      ]
     },
     {
       "id": "kl-records",
@@ -277,20 +322,10 @@
       "stage": "design-dev",
       "stageProgress": 85,
       "risk": "watch",
-      "owner": {
-        "name": "Anjali Menon",
-        "role": "Product lead",
-        "org": "Agami"
-      },
+      "owner": "anjali-menon",
       "team": [
-        {
-          "name": "Deepa Nair",
-          "role": "Design"
-        },
-        {
-          "name": "Arun Kumar",
-          "role": "Full stack"
-        }
+        "deepa-nair",
+        "arun-kumar"
       ],
       "target": "2027-01-15",
       "baseline": "2027-01-15",
@@ -306,7 +341,21 @@
           "to": null
         }
       ],
-      "note": "Bundle generation is slow for cases above 2,000 pages. Performance work in progress."
+      "note": "Bundle generation is slow for cases above 2,000 pages. Performance work in progress.",
+      "files": [
+        {
+          "name": "Design review notes",
+          "type": "doc",
+          "updated": "2026-03-30",
+          "href": null
+        },
+        {
+          "name": "Scope and process note",
+          "type": "pdf",
+          "updated": "2026-03-27",
+          "href": null
+        }
+      ]
     },
     {
       "id": "kl-insight",
@@ -315,16 +364,9 @@
       "stage": "internal-testing",
       "stageProgress": 20,
       "risk": "blocked",
-      "owner": {
-        "name": "Nandita Rao",
-        "role": "Data lead",
-        "org": "Agami"
-      },
+      "owner": "nandita-rao",
       "team": [
-        {
-          "name": "Faizal Ahmed",
-          "role": "Data engineering"
-        }
+        "faizal-ahmed"
       ],
       "target": "2026-11-20",
       "baseline": "2026-10-23",
@@ -345,7 +387,27 @@
           "to": null
         }
       ],
-      "note": "Publication rules for judge level data are pending a High Court decision. Testing continues on anonymised data."
+      "note": "Publication rules for judge level data are pending a High Court decision. Testing continues on anonymised data.",
+      "files": [
+        {
+          "name": "Test plan",
+          "type": "sheet",
+          "updated": "2026-08-31",
+          "href": null
+        },
+        {
+          "name": "Design and build specification",
+          "type": "doc",
+          "updated": "2026-08-28",
+          "href": null
+        },
+        {
+          "name": "Scope and process note",
+          "type": "pdf",
+          "updated": "2026-04-10",
+          "href": null
+        }
+      ]
     }
   ]
 }

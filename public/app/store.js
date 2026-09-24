@@ -21,4 +21,5 @@ async function getJson(path) {
 
 export const loadConfig = () => getJson('data/config.json');
 export const loadAccess = () => getJson('data/access.json');
+export const loadPeople = () => getJson('data/people.json');
 export const loadState = (slug) => getJson(`data/${slug}.json`);

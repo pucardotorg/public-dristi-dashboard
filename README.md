@@ -1,7 +1,7 @@
-# Court Deployment Tracker
+# DRISTI 2.0 Deployment Tracker
 
 A static, access gated dashboard that tells anyone in a court, a judge included,
-exactly where their state stands in the PUCAR rollout: what is being built, which
+exactly where their state stands in the DRISTI 2.0 rollout: what is being built, which
 stage it is in, who is working on it, when it is expected to go live, and whether
 a delay is expected.
 
@@ -11,26 +11,67 @@ decides which one a reader sees.
 ## What a reader sees
 
 1. **Access gate.** One code, no accounts. The code maps to one or more states.
-2. **State overview.** Weighted overall progress, courts live out of courts
-   planned, count of workstreams where a delay is expected, and the next go live
-   date.
-3. **Workstream list.** One row per piece of work, showing the five stage
-   pipeline, a progress bar, the owner, the target date, and a flag when the date
-   has moved. Rows expand for the team, the date history and a plain language note.
+2. **The stage board.** Five columns, one per stage, running left to right in the
+   order work moves through them. Each column carries its number, its name, a
+   count, a one line description of what happens at that stage, and a stack of
+   faces showing who is working at that stage.
+3. **A card per workstream**, in the column it has reached, showing its deadline
+   and the people on it. Clicking a card opens its detail: what it is, the
+   deadline, the latest note, everyone named on it, and the files attached.
+4. **A stack of faces** opens the full list of people at that stage.
+5. **A profile page per person**, reached from any face or name: who they are and
+   every workstream they are named on, across the courts the reader may see.
+6. **A timeline**, every workstream as a bar from when it started to when it is
+   due, at week, month or quarter scale, filterable by stage and by person.
+7. **The court switcher**, for a reader whose code covers more than one state.
 
 ### The five stages
 
-| Stage | Weight in the progress bar |
-| --- | --- |
-| Scoping | 10 |
-| Design & development | 40 |
-| Internal testing | 20 |
-| User testing | 20 |
-| Deployment | 10 |
+Scoping, Design & development, Internal testing, User testing, Deployment.
 
-Weights sit in `public/data/config.json`. They are unequal on purpose: build is
-the longest stage, so a workstream halfway through the build should not read as
-halfway to production. Overall state progress is the mean of its workstreams.
+They are defined in `public/data/config.json`. Colour appears exactly once per
+stage, on the numbered dot and on that stage's timeline bars, running gray
+through to green so the order reads as progress.
+
+### Routes
+
+The app is one page with hash routing, so every view is linkable:
+
+| Route | View |
+| --- | --- |
+| `#/court/<slug>` | the board for that court |
+| `#/court/<slug>/timeline` | the timeline for that court |
+| `#/court/<slug>/ws/<id>` | the board with that card's detail already open |
+| `#/person/<id>` | that person's profile |
+
+### Timeline scales
+
+The header is driven by a unit table in `public/app/views/timeline.js`. A unit
+says where to snap the origin, how to count columns from it, how to step
+forward, what its two header lines read, and optionally how to group columns
+into a band above them. Adding a fortnight or a half year means adding one
+entry, not touching the drawing code.
+
+| Scale | Column | Band | Header lines |
+| --- | --- | --- | --- |
+| Days | one day | month and year | date, then the weekday initial |
+| Weeks | one week, Monday start | month and year | date the week begins |
+| Months | one month | none | month name, then the year where a year begins |
+| Quarters | three months | none | Q1 to Q4, then the year where a year begins |
+
+Both header lines are always present, even when the second is empty, so the rule
+under the header stays unbroken whatever the scale.
+
+At day scale, Saturdays and Sundays are greyed in the header and tinted down the
+full height of the chart, since courts do not sit then. Consecutive weekend days
+are merged into one element, so a run of 543 days costs 77 of them rather than
+155.
+
+### Not shown yet
+
+The data carries a risk flag, progress within the current stage, the first
+committed date and the full stage history. The validator enforces all of it, and
+none of it is on the page. That is the next layer.
 
 ## Layout
 
@@ -40,17 +81,24 @@ public/              everything Netlify serves
   styles.css
   favicon.svg
   app/               ES modules, no build step, no dependencies
-    main.js          routing between gate and dashboard
+    main.js          hash routing between gate, board, timeline and profiles
     auth.js          access code check (PBKDF2 via WebCrypto)
     store.js         fetches the JSON
-    progress.js      every derived number, as pure functions
-    format.js        dates, initials, plurals
+    people.js        person lookup, monograms, who works on what
+    format.js        dates and month arithmetic for the timeline
     theme.js         light and dark
     html.js          escaping template helper
-    views/           gate.js, dashboard.js
+    views/
+      gate.js        the access code screen
+      chrome.js      shared top bar, avatars, face stacks
+      dashboard.js   the stage board
+      sheet.js       the detail dialog, for a workstream or a set of people
+      profile.js     one person and everything they are named on
+      timeline.js    the filterable gantt
   data/              the only files the scheduled update touches
     config.json      stages, risk flags, state registry
     access.json      KDF settings and access code verifiers
+    people.json      one canonical record per person
     punjab.json  haryana.json  kerala.json  gujarat.json
 scripts/
   validate.mjs       data checks, runs on every Netlify build
@@ -117,6 +165,13 @@ procedure the scheduled run follows.
 ## Assumptions in this POC
 
 - The five stages are the same for every state and every workstream.
+- A workstream sits in exactly one stage at a time.
+- People are referenced by id from `people.json`, so one person has one record
+  and one role no matter how many courts they appear in.
+- Nobody has a photograph yet, so profiles show a monogram. `people.json` takes a
+  `photo` path when real ones arrive.
+- Files are listed by name and type with no link yet, because the documents live
+  outside this repository. The `href` field is ready for them.
 - Workstream content, people and dates are illustrative, structured to match how
   the programme actually reports, but not drawn from live plans.
 - `baseline` is the first committed target date. The gap between `baseline` and

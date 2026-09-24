@@ -20,6 +20,7 @@ const read = (file) => JSON.parse(readFileSync(path.join(DATA, file), 'utf8'));
 
 const config = read('config.json');
 const access = read('access.json');
+const people = read('people.json');
 
 const stageIds = config.stages.map((stage) => stage.id);
 const riskIds = config.risks.map((risk) => risk.id);
@@ -51,6 +52,25 @@ if (!config.stages.length) fail('config.json', 'no stages defined');
 if (config.stages.reduce((sum, stage) => sum + stage.weight, 0) !== 100) {
   fail('config.json', 'stage weights must add up to 100');
 }
+
+// -------------------------------------------------------------------- people
+
+const FILE_TYPES = new Set(['pdf', 'doc', 'sheet', 'link']);
+const personIds = new Set();
+
+for (const person of people.people ?? []) {
+  const where = `people.json ${person.id ?? '(no id)'}`;
+  if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(person.id ?? '')) fail(where, 'id must be lower case and hyphenated');
+  if (personIds.has(person.id)) fail(where, 'duplicate id');
+  personIds.add(person.id);
+  for (const field of ['name', 'role', 'org']) {
+    if (!person[field]?.trim()) fail(where, `${field} is empty`);
+  }
+  if (person.photo != null && !/^(https:\/\/|photos\/)/.test(person.photo)) {
+    fail(where, 'photo must be an https URL or a path under photos/');
+  }
+}
+if (!personIds.size) fail('people.json', 'no people defined');
 
 // -------------------------------------------------------------------- access
 
@@ -91,6 +111,9 @@ for (const { slug, name } of config.states) {
     fail(where0, 'rollout.courtsLive exceeds courtsPlanned');
   }
   if (!state.workstreams?.length) fail(where0, 'has no workstreams');
+  for (const lead of state.leads ?? []) {
+    if (!personIds.has(lead)) fail(where0, `lead "${lead}" is not in people.json`);
+  }
 
   const seen = new Set();
   for (const ws of state.workstreams ?? []) {
@@ -107,9 +130,24 @@ for (const { slug, name } of config.states) {
     if (!(typeof ws.stageProgress === 'number' && ws.stageProgress >= 0 && ws.stageProgress <= 100)) {
       fail(where, 'stageProgress must be a number from 0 to 100');
     }
-    if (!ws.owner?.name || !ws.owner?.role) fail(where, 'owner needs a name and a role');
+    if (!personIds.has(ws.owner)) fail(where, `owner "${ws.owner}" is not in people.json`);
     for (const member of ws.team ?? []) {
-      if (!member.name) fail(where, 'a team member has no name');
+      if (!personIds.has(member)) fail(where, `team member "${member}" is not in people.json`);
+    }
+    if (new Set(ws.team ?? []).size !== (ws.team ?? []).length) fail(where, 'the team list repeats someone');
+    if ((ws.team ?? []).includes(ws.owner)) fail(where, 'the owner is also listed in the team');
+
+    if (!Array.isArray(ws.files)) {
+      fail(where, 'files must be an array, empty if nothing is attached');
+    } else {
+      for (const file of ws.files) {
+        if (!file.name?.trim()) fail(where, 'a file has no name');
+        if (!FILE_TYPES.has(file.type)) fail(where, `file "${file.name}" has type "${file.type}"`);
+        checkDay(where, `file "${file.name}" updated`, file.updated);
+        if (file.href != null && !/^https:\/\//.test(file.href)) {
+          fail(where, `file "${file.name}" href must be null or an https URL`);
+        }
+      }
     }
 
     const target = checkDay(where, 'target', ws.target);
@@ -169,4 +207,6 @@ if (problems.length) {
   console.error(`\n${problems.length} problem(s) found. Data not fit to publish.`);
   process.exit(1);
 }
-console.log(`Data looks good. ${config.states.length} states checked, ${warnings.length} warning(s).`);
+console.log(
+  `Data looks good. ${config.states.length} states and ${personIds.size} people checked, ${warnings.length} warning(s).`
+);

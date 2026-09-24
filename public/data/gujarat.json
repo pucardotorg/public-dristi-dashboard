@@ -9,16 +9,8 @@
     "note": "Newest state in the programme. Ahmedabad Rural is the pilot court, first go-live planned for December."
   },
   "leads": [
-    {
-      "name": "Hardik Trivedi",
-      "role": "Programme lead",
-      "org": "Agami"
-    },
-    {
-      "name": "Justice M. K. Desai",
-      "role": "e-Committee nominee",
-      "org": "High Court of Gujarat"
-    }
+    "hardik-trivedi",
+    "justice-m-k-desai"
   ],
   "workstreams": [
     {
@@ -28,20 +20,10 @@
       "stage": "user-testing",
       "stageProgress": 50,
       "risk": "on-track",
-      "owner": {
-        "name": "Devinder Sandhu",
-        "role": "Engineering lead",
-        "org": "Agami"
-      },
+      "owner": "devinder-sandhu",
       "team": [
-        {
-          "name": "Nikhil Rao",
-          "role": "Backend"
-        },
-        {
-          "name": "Jigna Patel",
-          "role": "Court liaison, Ahmedabad Rural"
-        }
+        "nikhil-rao",
+        "jigna-patel"
       ],
       "target": "2026-12-18",
       "baseline": "2026-12-18",
@@ -67,7 +49,27 @@
           "to": null
         }
       ],
-      "note": "First workstream to go live in Gujarat. Paired with the December pilot cutover."
+      "note": "First workstream to go live in Gujarat. Paired with the December pilot cutover.",
+      "files": [
+        {
+          "name": "User testing script",
+          "type": "sheet",
+          "updated": "2026-09-07",
+          "href": null
+        },
+        {
+          "name": "Internal test report",
+          "type": "sheet",
+          "updated": "2026-09-04",
+          "href": null
+        },
+        {
+          "name": "Design and build specification",
+          "type": "doc",
+          "updated": "2026-07-24",
+          "href": null
+        }
+      ]
     },
     {
       "id": "gj-causelist",
@@ -76,20 +78,10 @@
       "stage": "internal-testing",
       "stageProgress": 40,
       "risk": "on-track",
-      "owner": {
-        "name": "Anjali Menon",
-        "role": "Product lead",
-        "org": "Agami"
-      },
+      "owner": "anjali-menon",
       "team": [
-        {
-          "name": "Sahil Khurana",
-          "role": "Full stack"
-        },
-        {
-          "name": "Preeti Bansal",
-          "role": "QA"
-        }
+        "sahil-khurana",
+        "preeti-bansal"
       ],
       "target": "2027-01-22",
       "baseline": "2027-01-22",
@@ -110,7 +102,27 @@
           "to": null
         }
       ],
-      "note": "Gujarati language cause lists are covered. Font rendering on the existing court printers still to be checked."
+      "note": "Gujarati language cause lists are covered. Font rendering on the existing court printers still to be checked.",
+      "files": [
+        {
+          "name": "Test plan",
+          "type": "sheet",
+          "updated": "2026-08-31",
+          "href": null
+        },
+        {
+          "name": "Design and build specification",
+          "type": "doc",
+          "updated": "2026-08-28",
+          "href": null
+        },
+        {
+          "name": "Scope and process note",
+          "type": "pdf",
+          "updated": "2026-05-15",
+          "href": null
+        }
+      ]
     },
     {
       "id": "gj-efiling",
@@ -119,24 +131,11 @@
       "stage": "design-dev",
       "stageProgress": 55,
       "risk": "watch",
-      "owner": {
-        "name": "Hardik Trivedi",
-        "role": "Product lead",
-        "org": "Agami"
-      },
+      "owner": "hardik-trivedi",
       "team": [
-        {
-          "name": "Karan Ahluwalia",
-          "role": "Frontend"
-        },
-        {
-          "name": "Meera Joshi",
-          "role": "Backend"
-        },
-        {
-          "name": "Rekha Iyer",
-          "role": "Design"
-        }
+        "karan-ahluwalia",
+        "meera-joshi",
+        "rekha-iyer"
       ],
       "target": "2027-03-19",
       "baseline": "2027-03-19",
@@ -152,30 +151,33 @@
           "to": null
         }
       ],
-      "note": "Gujarat uses a different case type taxonomy. Mapping took three weeks longer than planned but is now signed off."
+      "note": "Gujarat uses a different case type taxonomy. Mapping took three weeks longer than planned but is now signed off.",
+      "files": [
+        {
+          "name": "Design review notes",
+          "type": "doc",
+          "updated": "2026-06-29",
+          "href": null
+        },
+        {
+          "name": "Scope and process note",
+          "type": "pdf",
+          "updated": "2026-06-26",
+          "href": null
+        }
+      ]
     },
     {
       "id": "gj-migration",
       "name": "Legacy data migration",
-      "summary": "Moving 1.4 million existing case records from the current system into the PUCAR case register.",
+      "summary": "Moving 1.4 million existing case records from the current system into the DRISTI 2.0 case register.",
       "stage": "design-dev",
       "stageProgress": 30,
       "risk": "delayed",
-      "owner": {
-        "name": "Faizal Ahmed",
-        "role": "Data engineering lead",
-        "org": "Agami"
-      },
+      "owner": "faizal-ahmed",
       "team": [
-        {
-          "name": "Nandita Rao",
-          "role": "Data lead"
-        },
-        {
-          "name": "Ketan Joshi",
-          "role": "NIC coordinator",
-          "org": "NIC Gujarat"
-        }
+        "nandita-rao",
+        "ketan-joshi"
       ],
       "target": "2027-02-26",
       "baseline": "2026-12-31",
@@ -191,7 +193,21 @@
           "to": null
         }
       ],
-      "note": "Party name records have no consistent format. Cleaning rules under review with NIC, eight weeks added."
+      "note": "Party name records have no consistent format. Cleaning rules under review with NIC, eight weeks added.",
+      "files": [
+        {
+          "name": "Design review notes",
+          "type": "doc",
+          "updated": "2026-06-08",
+          "href": null
+        },
+        {
+          "name": "Scope and process note",
+          "type": "pdf",
+          "updated": "2026-06-05",
+          "href": null
+        }
+      ]
     },
     {
       "id": "gj-training",
@@ -200,16 +216,9 @@
       "stage": "design-dev",
       "stageProgress": 20,
       "risk": "on-track",
-      "owner": {
-        "name": "Bhavna Sethi",
-        "role": "Adoption lead",
-        "org": "Agami"
-      },
+      "owner": "bhavna-sethi",
       "team": [
-        {
-          "name": "Jigna Patel",
-          "role": "Trainer"
-        }
+        "jigna-patel"
       ],
       "target": "2026-12-04",
       "baseline": "2026-12-04",
@@ -225,7 +234,21 @@
           "to": null
         }
       ],
-      "note": "Material is being translated into Gujarati. First batch of 40 staff starts 2026-10-19."
+      "note": "Material is being translated into Gujarati. First batch of 40 staff starts 2026-10-19.",
+      "files": [
+        {
+          "name": "Design review notes",
+          "type": "doc",
+          "updated": "2026-08-03",
+          "href": null
+        },
+        {
+          "name": "Scope and process note",
+          "type": "pdf",
+          "updated": "2026-07-31",
+          "href": null
+        }
+      ]
     },
     {
       "id": "gj-orders",
@@ -234,16 +257,9 @@
       "stage": "scoping",
       "stageProgress": 35,
       "risk": "on-track",
-      "owner": {
-        "name": "Vikram Seth",
-        "role": "Engineering lead",
-        "org": "Agami"
-      },
+      "owner": "vikram-seth",
       "team": [
-        {
-          "name": "Aditi Verma",
-          "role": "Design"
-        }
+        "aditi-verma"
       ],
       "target": "2027-07-30",
       "baseline": "2027-07-30",
@@ -254,7 +270,15 @@
           "to": null
         }
       ],
-      "note": "Depends on Kerala finishing user testing first so the template model is proven."
+      "note": "Depends on Kerala finishing user testing first so the template model is proven.",
+      "files": [
+        {
+          "name": "Draft requirements",
+          "type": "doc",
+          "updated": "2026-08-17",
+          "href": null
+        }
+      ]
     }
   ]
 }

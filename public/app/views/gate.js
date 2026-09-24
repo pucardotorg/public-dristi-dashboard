@@ -6,7 +6,6 @@ export function renderGate(root, { config, onSubmit }) {
     html`
       <main class="gate">
         <form class="gate__card" id="gate-form" novalidate>
-          <p class="gate__eyebrow">${config.programme}</p>
           <h1 class="gate__title">${config.title}</h1>
           <p class="gate__lede">
             Enter the access code shared with your court to see the status of every workstream in your state.

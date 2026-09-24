@@ -1,6 +1,6 @@
 {
-  "programme": "PUCAR",
-  "title": "Court Deployment Tracker",
+  "programme": "DRISTI 2.0",
+  "title": "DRISTI 2.0 Deployment Tracker",
   "subtitle": "Where each piece of work stands, court by court",
   "contact": "pucar-support@agami.in",
   "stages": [
@@ -41,15 +41,47 @@
     }
   ],
   "risks": [
-    { "id": "on-track", "label": "On track", "description": "Expected to hit the current target date." },
-    { "id": "watch", "label": "Watch", "description": "Some slack used up. No date change yet." },
-    { "id": "delayed", "label": "Delayed", "description": "Target date has moved out." },
-    { "id": "blocked", "label": "Blocked", "description": "Waiting on a decision or dependency outside the team." }
+    {
+      "id": "on-track",
+      "label": "On track",
+      "description": "Expected to hit the current target date."
+    },
+    {
+      "id": "watch",
+      "label": "Watch",
+      "description": "Some slack used up. No date change yet."
+    },
+    {
+      "id": "delayed",
+      "label": "Delayed",
+      "description": "Target date has moved out."
+    },
+    {
+      "id": "blocked",
+      "label": "Blocked",
+      "description": "Waiting on a decision or dependency outside the team."
+    }
   ],
   "states": [
-    { "slug": "punjab", "name": "Punjab", "court": "Punjab & Haryana High Court" },
-    { "slug": "haryana", "name": "Haryana", "court": "Punjab & Haryana High Court" },
-    { "slug": "kerala", "name": "Kerala", "court": "High Court of Kerala" },
-    { "slug": "gujarat", "name": "Gujarat", "court": "High Court of Gujarat" }
+    {
+      "slug": "punjab",
+      "name": "Punjab",
+      "court": "Punjab & Haryana High Court"
+    },
+    {
+      "slug": "haryana",
+      "name": "Haryana",
+      "court": "Punjab & Haryana High Court"
+    },
+    {
+      "slug": "kerala",
+      "name": "Kerala",
+      "court": "High Court of Kerala"
+    },
+    {
+      "slug": "gujarat",
+      "name": "Gujarat",
+      "court": "High Court of Gujarat"
+    }
   ]
 }

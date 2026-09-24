@@ -1,0 +1,268 @@
+{
+  "people": [
+    {
+      "id": "ritu-malhotra",
+      "name": "Ritu Malhotra",
+      "role": "Programme lead",
+      "org": "Agami",
+      "based": "Chandigarh",
+      "photo": null
+    },
+    {
+      "id": "mohit-chawla",
+      "name": "Mohit Chawla",
+      "role": "Programme lead",
+      "org": "Agami",
+      "based": "Gurugram",
+      "photo": null
+    },
+    {
+      "id": "lakshmi-pillai",
+      "name": "Lakshmi Pillai",
+      "role": "Programme lead",
+      "org": "Agami",
+      "based": "Kochi",
+      "photo": null
+    },
+    {
+      "id": "hardik-trivedi",
+      "name": "Hardik Trivedi",
+      "role": "Programme lead",
+      "org": "Agami",
+      "based": "Ahmedabad",
+      "photo": null
+    },
+    {
+      "id": "anjali-menon",
+      "name": "Anjali Menon",
+      "role": "Product lead",
+      "org": "Agami",
+      "based": "Bengaluru",
+      "photo": null
+    },
+    {
+      "id": "shalini-bhatt",
+      "name": "Shalini Bhatt",
+      "role": "Product lead",
+      "org": "Agami",
+      "based": "Delhi",
+      "photo": null
+    },
+    {
+      "id": "priya-varma",
+      "name": "Priya Varma",
+      "role": "Product lead",
+      "org": "Agami",
+      "based": "Kochi",
+      "photo": null
+    },
+    {
+      "id": "devinder-sandhu",
+      "name": "Devinder Sandhu",
+      "role": "Engineering lead",
+      "org": "Agami",
+      "based": "Chandigarh",
+      "photo": null
+    },
+    {
+      "id": "vikram-seth",
+      "name": "Vikram Seth",
+      "role": "Engineering lead",
+      "org": "Agami",
+      "based": "Bengaluru",
+      "photo": null
+    },
+    {
+      "id": "nandita-rao",
+      "name": "Nandita Rao",
+      "role": "Data lead",
+      "org": "Agami",
+      "based": "Bengaluru",
+      "photo": null
+    },
+    {
+      "id": "faizal-ahmed",
+      "name": "Faizal Ahmed",
+      "role": "Data engineering lead",
+      "org": "Agami",
+      "based": "Hyderabad",
+      "photo": null
+    },
+    {
+      "id": "bhavna-sethi",
+      "name": "Bhavna Sethi",
+      "role": "Adoption lead",
+      "org": "Agami",
+      "based": "Gurugram",
+      "photo": null
+    },
+    {
+      "id": "arun-kumar",
+      "name": "Arun Kumar",
+      "role": "Full stack engineer",
+      "org": "Agami",
+      "based": "Kochi",
+      "photo": null
+    },
+    {
+      "id": "sahil-khurana",
+      "name": "Sahil Khurana",
+      "role": "Full stack engineer",
+      "org": "Agami",
+      "based": "Delhi",
+      "photo": null
+    },
+    {
+      "id": "karan-ahluwalia",
+      "name": "Karan Ahluwalia",
+      "role": "Frontend engineer",
+      "org": "Agami",
+      "based": "Chandigarh",
+      "photo": null
+    },
+    {
+      "id": "ronak-shah",
+      "name": "Ronak Shah",
+      "role": "Frontend engineer",
+      "org": "Agami",
+      "based": "Mumbai",
+      "photo": null
+    },
+    {
+      "id": "meera-joshi",
+      "name": "Meera Joshi",
+      "role": "Backend engineer",
+      "org": "Agami",
+      "based": "Pune",
+      "photo": null
+    },
+    {
+      "id": "nikhil-rao",
+      "name": "Nikhil Rao",
+      "role": "Backend engineer",
+      "org": "Agami",
+      "based": "Bengaluru",
+      "photo": null
+    },
+    {
+      "id": "tarun-gill",
+      "name": "Tarun Gill",
+      "role": "Backend engineer",
+      "org": "Agami",
+      "based": "Chandigarh",
+      "photo": null
+    },
+    {
+      "id": "imran-qureshi",
+      "name": "Imran Qureshi",
+      "role": "Backend engineer",
+      "org": "Agami",
+      "based": "Hyderabad",
+      "photo": null
+    },
+    {
+      "id": "aditi-verma",
+      "name": "Aditi Verma",
+      "role": "Designer",
+      "org": "Agami",
+      "based": "Delhi",
+      "photo": null
+    },
+    {
+      "id": "deepa-nair",
+      "name": "Deepa Nair",
+      "role": "Designer",
+      "org": "Agami",
+      "based": "Kochi",
+      "photo": null
+    },
+    {
+      "id": "rekha-iyer",
+      "name": "Rekha Iyer",
+      "role": "Designer",
+      "org": "Agami",
+      "based": "Bengaluru",
+      "photo": null
+    },
+    {
+      "id": "preeti-bansal",
+      "name": "Preeti Bansal",
+      "role": "QA engineer",
+      "org": "Agami",
+      "based": "Chandigarh",
+      "photo": null
+    },
+    {
+      "id": "rajat-thakur",
+      "name": "Rajat Thakur",
+      "role": "Trainer",
+      "org": "Agami",
+      "based": "Panchkula",
+      "photo": null
+    },
+    {
+      "id": "sunita-devi",
+      "name": "Sunita Devi",
+      "role": "Trainer",
+      "org": "Agami",
+      "based": "Faridabad",
+      "photo": null
+    },
+    {
+      "id": "gurpreet-kaur",
+      "name": "Gurpreet Kaur",
+      "role": "Court liaison, Ludhiana",
+      "org": "Agami",
+      "based": "Ludhiana",
+      "photo": null
+    },
+    {
+      "id": "sreeja-menon",
+      "name": "Sreeja Menon",
+      "role": "Court liaison, Ernakulam",
+      "org": "Agami",
+      "based": "Ernakulam",
+      "photo": null
+    },
+    {
+      "id": "jigna-patel",
+      "name": "Jigna Patel",
+      "role": "Court liaison, Ahmedabad Rural",
+      "org": "Agami",
+      "based": "Ahmedabad",
+      "photo": null
+    },
+    {
+      "id": "ketan-joshi",
+      "name": "Ketan Joshi",
+      "role": "NIC coordinator",
+      "org": "NIC Gujarat",
+      "based": "Gandhinagar",
+      "photo": null
+    },
+    {
+      "id": "justice-a-s-grewal",
+      "name": "Justice A. S. Grewal",
+      "role": "Computer committee chair",
+      "org": "Punjab & Haryana High Court",
+      "based": "Chandigarh",
+      "photo": null
+    },
+    {
+      "id": "justice-r-vasudevan",
+      "name": "Justice R. Vasudevan",
+      "role": "Computerisation committee",
+      "org": "High Court of Kerala",
+      "based": "Kochi",
+      "photo": null
+    },
+    {
+      "id": "justice-m-k-desai",
+      "name": "Justice M. K. Desai",
+      "role": "e-Committee nominee",
+      "org": "High Court of Gujarat",
+      "based": "Ahmedabad",
+      "photo": null
+    }
+  ]
+}

@@ -1,8 +1,9 @@
 # Updating the status
 
-Everything a reader sees comes from four files:
+Everything a reader sees comes from five files:
 
 ```
+public/data/people.json     one record per person
 public/data/punjab.json
 public/data/haryana.json
 public/data/kerala.json
@@ -34,7 +35,7 @@ Nothing else needs to change to publish an update. No code, no rebuild.
     "courtsPlanned": 24,
     "note": "One or two sentences a judge would find useful."
   },
-  "leads": [{ "name": "...", "role": "...", "org": "..." }],
+  "leads": ["ritu-malhotra", "justice-a-s-grewal"],   // ids from people.json
   "workstreams": [
     {
       "id": "pb-efiling",           // stable, never reused, never renamed
@@ -43,9 +44,9 @@ Nothing else needs to change to publish an update. No code, no rebuild.
       "stage": "user-testing",      // an id from config.json stages
       "stageProgress": 45,          // 0 to 100, progress WITHIN the stage
       "risk": "on-track",           // on-track | watch | delayed | blocked
-      "owner": { "name": "...", "role": "...", "org": "..." },
-      "team": [{ "name": "...", "role": "..." }],
-      "target": "2026-11-14",       // current expected deployment date
+      "owner": "ritu-malhotra",     // one id from people.json
+      "team": ["karan-ahluwalia", "meera-joshi"],     // ids, never the owner
+      "target": "2026-11-14",       // the deadline shown on the card
       "baseline": "2026-11-14",     // the FIRST committed date, do not edit later
       "liveSince": null,            // set only once deployed, otherwise omit
       "history": [
@@ -54,7 +55,33 @@ Nothing else needs to change to publish an update. No code, no rebuild.
         { "stage": "internal-testing", "from": "2026-07-13", "to": "2026-08-28" },
         { "stage": "user-testing", "from": "2026-09-01", "to": null }
       ],
+      "files": [
+        {
+          "name": "User testing script",
+          "type": "sheet",          // pdf | doc | sheet | link
+          "updated": "2026-09-01",
+          "href": null              // null, or an https URL
+        }
+      ],
       "note": "What is actually happening, and why a date moved if it did."
+    }
+  ]
+}
+```
+
+`people.json` holds one record per person, referenced by id from every state
+file:
+
+```jsonc
+{
+  "people": [
+    {
+      "id": "ritu-malhotra",        // lower case, hyphenated, stable forever
+      "name": "Ritu Malhotra",
+      "role": "Programme lead",     // their job title, not their task
+      "org": "Agami",
+      "based": "Chandigarh",
+      "photo": null                 // null, an https URL, or photos/<file>
     }
   ]
 }
@@ -65,7 +92,11 @@ Nothing else needs to change to publish an update. No code, no rebuild.
 - Every date is `YYYY-MM-DD`. `updated` cannot be in the future.
 - `stage` and `risk` must be ids that exist in `config.json`.
 - `stageProgress` is a number from 0 to 100.
-- Every workstream has an owner with a name and a role, and a non empty `note`.
+- Every workstream has a non empty `note`.
+- `owner` and every `team` id exist in `people.json`. The owner is not repeated
+  in the team, and the team does not repeat anyone.
+- `files` is an array, empty if nothing is attached. Each file has a name, a type
+  from the list above, an `updated` date, and `href` either null or an https URL.
 - Ids are unique within a state.
 - `history` covers every stage up to and including the current one, and no stage
   after it. Finished stages need a `to` date, the current stage does not have one.
@@ -95,6 +126,15 @@ field to edit for that.
 
 Append to `workstreams` with a new id, `stage: "scoping"`, `history` holding just
 the scoping entry, and `baseline` equal to `target`. Nothing else to register.
+
+## Adding a person
+
+1. Add a record to `people.json` with a new id, their name, job title and
+   organisation. `photo` stays null until a real photograph exists.
+2. Reference the id from `owner` or `team`. Their profile page appears on its own
+   at `#/person/<id>`, listing everything they are named on.
+
+Never delete a person who is still referenced. The validator will catch it.
 
 ## Adding a state
 

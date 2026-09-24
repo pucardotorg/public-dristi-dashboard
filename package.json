@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "Static, access gated deployment tracker for PUCAR court rollouts",
+  "description": "Static, access gated deployment tracker for DRISTI 2.0 court rollouts",
   "scripts": {
     "validate": "node scripts/validate.mjs",
     "check": "node --check public/app/main.js && npm run validate",

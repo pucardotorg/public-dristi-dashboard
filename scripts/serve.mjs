@@ -3,7 +3,9 @@
  * Static server for local checking. Netlify serves public/ in production, so
  * this only needs to do the same thing with correct content types.
  *
- *   npm run serve
+ *   npm run serve            port 4173
+ *   npm run serve -- 5173    or any free port
+ *   PORT=5173 npm run serve
  */
 import { createServer } from 'node:http';
 import { createReadStream, statSync } from 'node:fs';
@@ -11,7 +13,7 @@ import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 
 const ROOT = fileURLToPath(new URL('../public/', import.meta.url));
-const PORT = Number(process.env.PORT ?? 4173);
+const PORT = Number(process.argv[2] ?? process.env.PORT ?? 4173);
 
 const TYPES = {
   '.html': 'text/html; charset=utf-8',
