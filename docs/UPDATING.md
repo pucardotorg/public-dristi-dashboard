@@ -112,6 +112,15 @@ file:
 2. Append the next stage with a `from` date.
 3. Set `stage` to the new stage and reset `stageProgress` to a fraction of it.
 
+## What drives the bar colour
+
+- Set `risk` to `blocked` and the card's bar turns red.
+- A deployed workstream (`stage: "deployment"`, `stageProgress: 100`) turns green.
+- A planned workstream that has not begun stays gray: put it in `scoping` with
+  `stageProgress: 0` and a `from` date in the future.
+- Everything else is blue, and the bar's length follows `stage` and
+  `stageProgress`.
+
 ## Recording a delay
 
 1. Leave `baseline` alone. It is the record of what was first promised.

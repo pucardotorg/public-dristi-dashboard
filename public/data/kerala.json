@@ -408,6 +408,29 @@
           "href": null
         }
       ]
+    },
+    {
+      "id": "kl-hearings",
+      "name": "Virtual hearings",
+      "summary": "Video hearings joined from the case record, with the link sent to parties alongside the notice.",
+      "stage": "scoping",
+      "stageProgress": 0,
+      "risk": "on-track",
+      "owner": "priya-varma",
+      "team": [
+        "sreeja-menon"
+      ],
+      "target": "2027-06-30",
+      "baseline": "2027-06-30",
+      "history": [
+        {
+          "stage": "scoping",
+          "from": "2026-10-26",
+          "to": null
+        }
+      ],
+      "files": [],
+      "note": "Planned. Scoping starts on 26 October with the Ernakulam court staff."
     }
   ]
 }

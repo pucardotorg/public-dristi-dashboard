@@ -67,11 +67,31 @@ full height of the chart, since courts do not sit then. Consecutive weekend days
 are merged into one element, so a run of 543 days costs 77 of them rather than
 155.
 
+### Progress and status
+
+Every card carries a progress bar. Its length is completion across all five
+stages, weighted so build counts for more than scoping: scoping 10, design and
+development 40, internal testing 20, user testing 20, deployment 10. Halfway
+through build therefore reads as 30%, not 50%.
+
+Its colour is one of four states, worked out from the data at render time:
+
+| Colour | State | Rule |
+| --- | --- | --- |
+| Gray, empty | Not started | no progress yet, or the start date is still ahead |
+| Blue | In progress | everything else |
+| Red | Blocked | `risk` is `blocked` |
+| Green | Completed | deployed, with `stageProgress` at 100 |
+
+Completed wins over blocked, and blocked wins over not started. A legend above
+the board explains the colours, and the label beside each bar spells out the
+state, so colour is never the only signal.
+
 ### Not shown yet
 
-The data carries a risk flag, progress within the current stage, the first
-committed date and the full stage history. The validator enforces all of it, and
-none of it is on the page. That is the next layer.
+The data also carries the first committed date, the watch and delayed flags,
+and the full stage history. The validator enforces all of it, and none of it is
+on the page yet.
 
 ## Layout
 

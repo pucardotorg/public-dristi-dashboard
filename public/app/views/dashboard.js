@@ -1,6 +1,7 @@
 import { html, mount, raw } from '../html.js';
 import { formatDay, plural } from '../format.js';
 import { collaborators, contributors } from '../people.js';
+import { STATUSES, isLive, progressOf, statusOf } from '../progress.js';
 import { stack, topbar } from './chrome.js';
 import { bindSheet, sheetMarkup } from './sheet.js';
 
@@ -26,9 +27,15 @@ export function renderDashboard(root, context) {
           <p class="title__updated">Updated ${formatDay(state.updated)}</p>
         </div>
 
+        <ul class="legend" aria-label="What the progress colours mean">
+          ${STATUSES.map(
+            (status) => raw(html`<li class="legend__item" data-status="${status.id}">${status.label}</li>`)
+          )}
+        </ul>
+
         <ol class="board">
           ${config.stages.map(
-            (stage, index) => raw(column(stage, index, byStage.get(stage.id), people))
+            (stage, index) => raw(column(stage, index, byStage.get(stage.id), people, config.stages))
           )}
         </ol>
       </main>
@@ -65,7 +72,7 @@ export function renderDashboard(root, context) {
   return sheet;
 }
 
-function column(stage, index, workstreams, people) {
+function column(stage, index, workstreams, people, stages) {
   const ids = collaborators(workstreams);
 
   return html`
@@ -92,21 +99,33 @@ function column(stage, index, workstreams, people) {
       </div>
       <ul class="stage__list">
         ${workstreams.length
-          ? workstreams.map((ws) => raw(card(ws, people, stage)))
+          ? workstreams.map((ws) => raw(card(ws, people, stages)))
           : raw('<li class="stage__none">None yet</li>')}
       </ul>
     </li>
   `;
 }
 
-function card(ws, people, stage) {
-  const live = stage.id === 'deployment' && ws.stageProgress === 100;
+function card(ws, people, stages) {
+  const live = isLive(stages, ws);
   const due = live ? ws.liveSince ?? ws.target : ws.target;
+  const percent = progressOf(stages, ws);
+  const status = statusOf(stages, ws);
+  const label = STATUSES.find((entry) => entry.id === status).label;
 
   return html`
     <li>
       <button class="card" type="button" data-ws="${ws.id}">
         <span class="card__name">${ws.name}</span>
+        <span class="card__progress" data-status="${status}">
+          <progress
+            class="meter"
+            value="${percent}"
+            max="100"
+            aria-label="${ws.name}: ${percent}% complete, ${label.toLowerCase()}"
+          ></progress>
+          <span class="card__status">${status === 'in-progress' ? `${percent}%` : label}</span>
+        </span>
         <span class="card__foot">
           <span class="card__due">${live ? 'Live' : 'Due'} ${formatDay(due, { short: true })}</span>
           ${raw(stack(contributors(ws), people, { max: 3 }))}
