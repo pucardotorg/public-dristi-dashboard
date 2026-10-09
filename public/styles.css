@@ -515,6 +515,12 @@ a:hover {
   color: var(--text-secondary);
 }
 
+/* index.html: the content security policy refuses inline style attributes. */
+.noscript {
+  padding: 2rem;
+  text-align: center;
+}
+
 @media print {
   .topbar {
     position: static;

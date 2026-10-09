@@ -1,12 +1,20 @@
+# Netlify reads this on every deploy. Nothing is compiled: the site is the
+# public/ folder as it stands, and the data validator runs as the build step so
+# a bad edit fails the deploy instead of reaching a judge.
+
 [build]
   publish = "public"
   command = "node scripts/validate.mjs"
+
+[build.environment]
+  NODE_VERSION = "22"
 
 [[headers]]
   for = "/*"
   [headers.values]
     X-Frame-Options = "DENY"
     X-Content-Type-Options = "nosniff"
+    X-Robots-Tag = "noindex, nofollow"
     Referrer-Policy = "no-referrer"
     Permissions-Policy = "geolocation=(), camera=(), microphone=()"
     Content-Security-Policy = "default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; form-action 'none'; base-uri 'none'; frame-ancestors 'none'"
@@ -22,7 +30,6 @@
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
 
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+# No catch-all redirect. Views are addressed by #hash, so every page is
+# index.html already, and a missing data file should be a real 404 rather than
+# index.html served with a 200.
